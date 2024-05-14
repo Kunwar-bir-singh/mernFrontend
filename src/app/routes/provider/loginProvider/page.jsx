@@ -65,9 +65,9 @@ const page = () => {
               phone: "",
               password: "",
             });
-            setTimeout(() => {
-              window.location.href = "/";
-            }, 500);
+            // setTimeout(() => {
+            //   window.location.href = "/";
+            // }, 500);
           } 
           else if (jsonResponse.code === 0) {
             console.log("Invalid Credentails.");
