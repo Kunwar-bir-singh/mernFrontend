@@ -1,0 +1,157 @@
+.createProfession input {
+    border: 2px solid black;
+}
+.createProfession_container{
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 3%;
+}
+  body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+  /*   background: linear-gradient(#141e30, #243b55); */
+  }
+  
+  .login-box {
+    position: relative;
+    width: 400px;
+    padding: 40px;
+    background: linear-gradient(#141e30, #243b55);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size : 1.5vw;  
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+    .login-box .user-box input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 30px;
+      border: none;
+      border-bottom: 1px solid #fff;
+      outline: none;
+      background: transparent;
+    }
+    .login-box .user-box label {
+      position: absolute;
+      top:0;
+      left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      pointer-events: none;
+      transition: .5s;
+    }
+  
+    .login-box .user-box input:focus ~ label,
+    .login-box .user-box input:valid ~ label {
+      top: -20px;
+      left: 0;
+      color: #03e9f4;
+      font-size: 12px;
+    }
+  
+    .createProfession_btn {
+        /* Variables */
+        --button_radius: 0.75em;
+        --button_color: #e8e8e8;
+        --button_outline_color: #000000;
+        font-size: 13px;
+        font-weight: bold;
+        border: none;
+        border-radius: var(--button_radius);
+        background: var(--button_outline_color);
+      }
+      
+      .button_top {
+        display: block;
+        box-sizing: border-box;
+        border: 2px solid var(--button_outline_color);
+        border-radius: var(--button_radius);
+        padding: 0.40em 1.2em;
+        background: var(--button_color);
+        color: var(--button_outline_color);
+        transform: translateY(-0.2em);
+        transition: transform 0.1s ease;
+      }
+      
+      .createProfession_btn:hover .button_top {
+        /* Pull the button upwards when hovered */
+        transform: translateY(-0.33em);
+      }
+      
+      .createProfession_btn:active .button_top {
+        /* Push the button downwards when pressed */
+        transform: translateY(0);
+      }
+
+      .apiResponse{
+        opacity: 0;
+        animation: fadeIn ease-in 0.5s forwards; 
+      }
+
+      .apiResponse_msg{
+        font-size: 1.3vw;
+        margin-top: 10%;
+        font-weight: bold;
+      }
+      .want_to_click_link{
+        color: black;
+        text-align: center;
+        font-size: 1.3vw;
+        font-weight: 500;
+        font-family: sans-serif;
+        margin-top: 1%;
+        cursor: pointer;
+      }
+      .want_to_click_link:hover{
+        text-decoration: underline;
+        transition: 0.2s ease-in-out;
+        font-size: 1.4vw;
+      }
+
+      @media screen and (min-width: 900px) and (max-width: 1200px){
+        .want_to_click_link,.login-box h2 ,.apiResponse_msg{
+          font-size: 2.3vw;
+        }
+
+      }
+      @media screen and (min-width: 550px) and (max-width: 900px){
+        .want_to_click_link ,.login-box h2 ,.apiResponse_msg{
+          font-size: 3.3vw;
+        }
+      }
+      @media screen and  (max-width: 550px){
+        .want_to_click_link ,.login-box h2 ,.apiResponse_msg{
+          width: 80%;
+          margin-left: 10%;
+          text-align: center;
+          font-size: 4.3vw;
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0; /* Start with opacity 0 */
+        }
+        to {
+          opacity: 1; /* End with opacity 1 */
+        }
+      }

@@ -1,0 +1,8 @@
+#grayed-out {
+    cursor: not-allowed; 
+  }
+
+#saveBtn{
+    background: rgb(14, 155, 14);
+    
+}
